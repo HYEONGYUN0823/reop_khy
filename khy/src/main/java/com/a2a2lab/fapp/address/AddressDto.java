@@ -49,6 +49,4 @@ public class AddressDto {
 		this.memo = memo;
 	}
 	
-	
-	
 }
