@@ -14,13 +14,21 @@ public class AddressController {
 	@Autowired
 	AddressService addressService;
 	
+//	@RequestMapping(value = "/address/addressXdmList")
+//	public String codeGroupXdmList(Model model) {
+//		List<AddressDto> addressDtos = new ArrayList<>();
+//		
+//		addressDtos = addressService.selectList();
+//		
+//		model.addAttribute("list", addressDtos);
+//		
+//		return "address/addressXdmList";
+//	}
+	
 	@RequestMapping(value = "/address/addressXdmList")
 	public String codeGroupXdmList(Model model) {
-		List<AddressDto> addressDtos = new ArrayList<>();
 		
-		addressDtos = addressService.selectList();
-		
-		model.addAttribute("list", addressDtos);
+		model.addAttribute("list", addressService.selectList());
 		
 		return "address/addressXdmList";
 	}
