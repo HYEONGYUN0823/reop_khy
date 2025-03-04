@@ -18,12 +18,22 @@ public class AddressService {
 	AddressDao addressDao;
 //	AddressDao addressDao = new AddressDao();
 	
+//	public List<AddressDto> selectList() {
+//		List<AddressDto> addressDtos = new ArrayList<>();
+//		
+//		addressDtos = addressDao.selectList();
+//		
+//		return addressDtos;
+//	
+
 	public List<AddressDto> selectList() {
-		List<AddressDto> addressDtos = new ArrayList<>();
 		
-		addressDtos = addressDao.selectList();
+		return addressDao.selectList();
+	}
+	
+	public AddressDto selectOne() {
 		
-		return addressDtos;
+		return addressDao.selectOne();
 	}
 	
 }

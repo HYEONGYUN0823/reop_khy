@@ -32,5 +32,13 @@ public class AddressController {
 		
 		return "address/addressXdmList";
 	}
+	
+	@RequestMapping(value = "/address/addressXdmView")
+	public String codeGroupXdmView(Model model) {
+		
+		model.addAttribute("item", addressService.selectOne());
+		
+		return "address/addressXdmView";
+	}
 
 }

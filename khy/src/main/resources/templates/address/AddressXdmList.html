@@ -15,7 +15,7 @@
   </tr>
   <tr th:each="list : ${list}">
   	<td th:text="${list.seq}"></td>
-  	<td th:text="${list.firstName}"></td>
+	<td><a th:href="@{/address/addressXdmView}" th:text="${list.firstName}"></a></td>
   	<td th:text="${list.lastName}"></td>
   	<td th:text="${list.naverId}"></td>
   	<td th:text="${list.nickName}"></td>
