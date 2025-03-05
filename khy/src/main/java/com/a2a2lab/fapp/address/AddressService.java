@@ -36,4 +36,9 @@ public class AddressService {
 		return addressDao.selectOne(addresDto);
 	}
 	
+	public int insert(AddressDto addresDto) {
+		
+		return addressDao.insert(addresDto);
+	}
+	
 }

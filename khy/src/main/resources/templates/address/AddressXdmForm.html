@@ -4,11 +4,26 @@
 </head>
 <body>
 
-<form action="/address/addressXdmInst" method="post">
-	seq: <input hype="text" name="seq" maxlength="10"/>
+<form action="/address/addressXdmInst" method="post" id="form">
+	seq: <input type="text" name="seq" id="seq" maxlength="10" disabled="disabled"/>
 	firstName: <input type="text" name="firstName" placeholder="이름을 입력"/>
-	<button type="submit">저장</button>
+	lastName: <input type="text" name="lastName" placeholder="이름을 입력"/>
+	naverId: <input type="text" name="naverId" placeholder="이름을 입력"/>
+	nickName: <input type="text" name="nickName" placeholder="이름을 입력"/>
+	memo: <input type="text" name="memo" placeholder="이름을 입력"/>
+	<button type="button" id="btnSave">저장</button>
 </form>
+
+<script type="text/javascript">
+	document.getElementById("btnSave").onclick = function() {
+		document.getElementById("form").submit();
+	}
+	
+//	document.getElementById("name").onclick = function() {
+//		alert("adsfadf");
+//	}
+//
+</script>
 
 </body>
 </html>

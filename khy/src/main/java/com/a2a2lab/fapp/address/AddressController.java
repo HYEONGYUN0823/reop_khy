@@ -53,7 +53,12 @@ public class AddressController {
 	public String codeGroupXdmInst(AddressDto addressDto) {
 		System.out.println("addressDto.getSeq(): " + addressDto.getSeq());
 		System.out.println("addressDto.getFirstName():" + addressDto.getFirstName());
-		return "address/addressXdmForm";
+		
+		addressService.insert(addressDto);
+		
+		System.out.println("addressDto.getSeq(): " + addressDto.getSeq());
+		
+		return "redirect:/address/addressXdmList";
 	}
 
 }
