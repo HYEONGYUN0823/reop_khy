@@ -31,9 +31,9 @@ public class AddressService {
 		return addressDao.selectList();
 	}
 	
-	public AddressDto selectOne() {
+	public AddressDto selectOne(AddressDto addresDto) {
 		
-		return addressDao.selectOne();
+		return addressDao.selectOne(addresDto);
 	}
 	
 }

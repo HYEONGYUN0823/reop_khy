@@ -34,11 +34,26 @@ public class AddressController {
 	}
 	
 	@RequestMapping(value = "/address/addressXdmView")
-	public String codeGroupXdmView(Model model) {
+	public String codeGroupXdmView(Model model, AddressDto addressDto) {
 		
-		model.addAttribute("item", addressService.selectOne());
+		System.out.println("addressDto.getSeq(): " + addressDto.getSeq());
+		
+		model.addAttribute("item", addressService.selectOne(addressDto));
 		
 		return "address/addressXdmView";
+	}
+	
+	@RequestMapping(value = "/address/addressXdmForm")
+	public String codeGroupXdmForm() {
+		
+		return "address/addressXdmForm";
+	}
+	
+	@RequestMapping(value = "/address/addressXdmInst")
+	public String codeGroupXdmInst(AddressDto addressDto) {
+		System.out.println("addressDto.getSeq(): " + addressDto.getSeq());
+		System.out.println("addressDto.getFirstName():" + addressDto.getFirstName());
+		return "address/addressXdmForm";
 	}
 
 }

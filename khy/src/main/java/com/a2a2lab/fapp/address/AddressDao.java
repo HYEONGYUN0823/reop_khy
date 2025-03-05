@@ -13,6 +13,6 @@ public interface AddressDao {
 	*/
 	
 	public List<AddressDto> selectList();
-	public AddressDto selectOne();
+	public AddressDto selectOne(AddressDto addresDto);
 	
 }

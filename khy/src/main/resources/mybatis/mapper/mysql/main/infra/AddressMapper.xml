@@ -26,7 +26,7 @@
 		FROM
 			address
 		WHERE 1=1
-			AND seq = 1
+			AND seq = #{seq}
 		ORDER BY seq DESC
 	</select>
 	  
