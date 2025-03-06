@@ -41,4 +41,9 @@ public class AddressService {
 		return addressDao.insert(addresDto);
 	}
 	
+	public int update(AddressDto addressDto) {
+		
+		return addressDao.update(addressDto);
+	}
+	
 }

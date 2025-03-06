@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head>
+</head>
+<body>
+
+	<form action="/address/addressXdmUpdt" method="post" id="form">
+		<input type="hidden" name="seq" th:value="${item?.seq}"/>
+		seq: <input type="text" name="seq" id="seq" disabled th:value="${item?.seq}"/>
+		firstName: <input type="text" name="firstName" id="firstName" placeholder="성을 입력하세요" th:value="${item?.firstName}"/>
+		lastName: <input type="text" name="lastName" id="lastName" placeholder="이름을 입력하세요" th:value="${item?.lastName}"/>
+		naverId: <input type="text" name="naverId" id="naverId" placeholder="아이디를 입력하세요" th:value="${item?.naverId}"/>
+		nickName: <input type="text" name="nickName" id="nickName" placeholder="닉네임을 입력하세요" th:value="${item?.nickName}"/>
+		memo: <input type="text" name="memo" id="memo" placeholder="메모하세요" th:value="${item?.memo}"/>
+		<button type="button" id="btnSave">저장</button>
+	</form>
+	
+	<script type="text/javascript">
+		document.getElementById("btnSave").onclick = function() {
+			document.getElementById("form").submit();
+		}
+	</script>
+
+</body>
+</html>
