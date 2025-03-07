@@ -7,6 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 @Controller
 public class AddressController {
@@ -74,5 +77,19 @@ public class AddressController {
 		
 		return "redirect:/address/addressXdmList";
 	}
-
+	
+	@RequestMapping(value = "/address/addressXdmDele")
+	public String codeGroupXdmDele(AddressDto addressDto) {
+		addressService.delete(addressDto);
+		
+		return "redirect:/address/addressXdmList";
+	}
+	
+	@RequestMapping(value = "/address/addressXdmUele")
+	public String codeGroupXdmUele(AddressDto addressDto) {
+		addressService.uelete(addressDto);
+		
+		return "redirect:/address/addressXdmList";
+	}
+	
 }

@@ -16,6 +16,7 @@
 		FROM
 			address
 		WHERE 1=1
+			AND delNy = 1
 		ORDER BY seq DESC
 	</select>
 	
@@ -56,6 +57,17 @@
 			naverId = #{naverId},
 			nickName = #{nickName},
 			memo = #{memo}
+		WHERE seq = #{seq}
+	</update>
+	
+	<delete id="delete">
+		DELETE FROM address
+		WHERE seq = #{seq}
+	</delete>
+	
+	<update id="uelete">
+		UPDATE address SET
+			delNy = 0
 		WHERE seq = #{seq}
 	</update>
 	  
